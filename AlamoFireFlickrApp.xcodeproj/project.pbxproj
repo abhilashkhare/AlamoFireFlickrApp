@@ -12,9 +12,11 @@
 		34F6737921071A1D002EA654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F6737721071A1D002EA654 /* Main.storyboard */; };
 		34F6737B21071A20002EA654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F6737A21071A20002EA654 /* Assets.xcassets */; };
 		34F6737E21071A20002EA654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F6737C21071A20002EA654 /* LaunchScreen.storyboard */; };
+		42541D6167BB63FCCED24E09 /* Pods_AlamoFireFlickrApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31414F692C16F90ACC432A2A /* Pods_AlamoFireFlickrApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31414F692C16F90ACC432A2A /* Pods_AlamoFireFlickrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamoFireFlickrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F6737021071A1D002EA654 /* AlamoFireFlickrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamoFireFlickrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F6737321071A1D002EA654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34F6737521071A1D002EA654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		34F6737A21071A20002EA654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34F6737D21071A20002EA654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34F6737F21071A20002EA654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81D547A493208296DC8CBE57 /* Pods-AlamoFireFlickrApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamoFireFlickrApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamoFireFlickrApp/Pods-AlamoFireFlickrApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AE7FE212D53D411159B08354 /* Pods-AlamoFireFlickrApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamoFireFlickrApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamoFireFlickrApp/Pods-AlamoFireFlickrApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42541D6167BB63FCCED24E09 /* Pods_AlamoFireFlickrApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				34F6737221071A1D002EA654 /* AlamoFireFlickrApp */,
 				34F6737121071A1D002EA654 /* Products */,
+				C5E4D9ECD5737C397BA4A2FC /* Pods */,
+				4864AA5B01159CBFC3280BBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = AlamoFireFlickrApp;
 			sourceTree = "<group>";
 		};
+		4864AA5B01159CBFC3280BBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31414F692C16F90ACC432A2A /* Pods_AlamoFireFlickrApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5E4D9ECD5737C397BA4A2FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81D547A493208296DC8CBE57 /* Pods-AlamoFireFlickrApp.debug.xcconfig */,
+				AE7FE212D53D411159B08354 /* Pods-AlamoFireFlickrApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34F6738221071A20002EA654 /* Build configuration list for PBXNativeTarget "AlamoFireFlickrApp" */;
 			buildPhases = (
+				AF2BE6CA22310DA85E1E75EE /* [CP] Check Pods Manifest.lock */,
 				34F6736C21071A1D002EA654 /* Sources */,
 				34F6736D21071A1D002EA654 /* Frameworks */,
 				34F6736E21071A1D002EA654 /* Resources */,
+				6450AECFE80B49A322E9427C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6450AECFE80B49A322E9427C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlamoFireFlickrApp/Pods-AlamoFireFlickrApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlamoFireFlickrApp/Pods-AlamoFireFlickrApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF2BE6CA22310DA85E1E75EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlamoFireFlickrApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		34F6736C21071A1D002EA654 /* Sources */ = {
@@ -278,15 +343,13 @@
 		};
 		34F6738321071A20002EA654 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81D547A493208296DC8CBE57 /* Pods-AlamoFireFlickrApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVL8M2M6VM;
 				INFOPLIST_FILE = AlamoFireFlickrApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhidev.AlamoFireFlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +359,13 @@
 		};
 		34F6738421071A20002EA654 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE7FE212D53D411159B08354 /* Pods-AlamoFireFlickrApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVL8M2M6VM;
 				INFOPLIST_FILE = AlamoFireFlickrApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhidev.AlamoFireFlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,0 +1,6 @@
+framework module Pods_AlamoFireFlickrApp {
+  umbrella header "Pods-AlamoFireFlickrApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
