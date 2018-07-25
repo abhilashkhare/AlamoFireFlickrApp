@@ -34,6 +34,9 @@
                                     <constraint firstAttribute="width" constant="80" id="pFR-sH-KeH"/>
                                 </constraints>
                                 <state key="normal" title="Get Image"/>
+                                <connections>
+                                    <action selector="touchGetImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OLP-TX-COJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,6 +49,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Y0p-IP-nXq" id="CH3-KP-UeG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
