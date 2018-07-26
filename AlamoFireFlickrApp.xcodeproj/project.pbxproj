@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340F93582109555E0047C9C3 /* AFFlickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340F93572109555E0047C9C3 /* AFFlickrClient.swift */; };
 		34F6737421071A1D002EA654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6737321071A1D002EA654 /* AppDelegate.swift */; };
 		34F6737621071A1D002EA654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6737521071A1D002EA654 /* ViewController.swift */; };
 		34F6737921071A1D002EA654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F6737721071A1D002EA654 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		31414F692C16F90ACC432A2A /* Pods_AlamoFireFlickrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamoFireFlickrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		340F93572109555E0047C9C3 /* AFFlickrClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFFlickrClient.swift; sourceTree = "<group>"; };
 		34F6737021071A1D002EA654 /* AlamoFireFlickrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamoFireFlickrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F6737321071A1D002EA654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34F6737521071A1D002EA654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +42,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340F93592109556B0047C9C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				340F93572109555E0047C9C3 /* AFFlickrClient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		340F935A2109557C0047C9C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				34F6737521071A1D002EA654 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		34F6736721071A1D002EA654 = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +79,9 @@
 		34F6737221071A1D002EA654 /* AlamoFireFlickrApp */ = {
 			isa = PBXGroup;
 			children = (
+				340F935A2109557C0047C9C3 /* Controller */,
+				340F93592109556B0047C9C3 /* Model */,
 				34F6737321071A1D002EA654 /* AppDelegate.swift */,
-				34F6737521071A1D002EA654 /* ViewController.swift */,
 				34F6737721071A1D002EA654 /* Main.storyboard */,
 				34F6737A21071A20002EA654 /* Assets.xcassets */,
 				34F6737C21071A20002EA654 /* LaunchScreen.storyboard */,
@@ -202,6 +221,7 @@
 			files = (
 				34F6737621071A1D002EA654 /* ViewController.swift in Sources */,
 				34F6737421071A1D002EA654 /* AppDelegate.swift in Sources */,
+				340F93582109555E0047C9C3 /* AFFlickrClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +369,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVL8M2M6VM;
 				INFOPLIST_FILE = AlamoFireFlickrApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhidev.AlamoFireFlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -365,7 +388,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVL8M2M6VM;
 				INFOPLIST_FILE = AlamoFireFlickrApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abhidev.AlamoFireFlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

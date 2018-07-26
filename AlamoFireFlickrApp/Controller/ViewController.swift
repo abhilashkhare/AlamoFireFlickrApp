@@ -18,10 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func touchGetImage(_ sender: Any) {
-        Alamofire.request("https://api.flickr.com/services/rest/", method: .get, parameters: ["method":"flickr.photos.search","api_key":"c4deaa1b0a7b77672f46c6a4b145eccc", "text":"ocean","page":"1","format":"json","nojsoncallback":"1"]).responseJSON { (response) in
-            print(response.value)
-        }
-        
+     AFFlickrClient.sharedInstance.fetchImageGET()
     }
 }
 
