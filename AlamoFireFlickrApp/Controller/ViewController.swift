@@ -18,7 +18,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func touchGetImage(_ sender: Any) {
-     AFFlickrClient.sharedInstance.fetchImageGET()
+        AFFlickrClient.sharedInstance.fetchImageGET { (result, error) in
+            if(error != nil){
+                print(error)
+            }
+            else{
+                print(result)
+            }
+        }
     }
 }
 
