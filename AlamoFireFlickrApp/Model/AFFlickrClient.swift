@@ -13,6 +13,24 @@ import Alamofire
 class AFFlickrClient {
     static var sharedInstance = AFFlickrClient()
     
+    fileprivate func GETImage(_ response: (DataResponse<Any>), _ completionHandlerForGETFetch: @escaping (_ result : AnyObject?, _ error : String?) ->Void)  {
+        if let result = response.result.value as? [String : Any] {
+            if let photos = result["photos"] as? [String : Any]{
+                if let photo = photos["photo"] as? [[String : Any]]{
+                    let randomImage  = Int(arc4random_uniform(UInt32(100)))
+                    if let image = photo[randomImage] as? [String : Any]{
+                        completionHandlerForGETFetch(image as AnyObject,nil)
+                    }
+                }
+            }
+         }
+        else{
+            completionHandlerForGETFetch(nil,"Error")
+
+        }
+        
+    }
+    
     func fetchImageGET(_ completionHandlerForGET: @escaping (_ result : AnyObject?, _ error : String?) ->Void){
         let randomPageNumber = arc4random_uniform(UInt32(1000))
         print(randomPageNumber)
@@ -21,22 +39,15 @@ class AFFlickrClient {
                 completionHandlerForGET(nil,response.error.debugDescription)
             }
             else{
-                if let result = response.result.value as? [String : Any] {
-                    if let photos = result["photos"] as? [String : Any]{
-                        if let photo = photos["photo"] as? [[String : Any]]{
-                            let randomImage  = Int(arc4random_uniform(UInt32(100)))
-                            if let image = photo[randomImage] as? [String : Any]{
-                                completionHandlerForGET(image as AnyObject,nil)
-                            }
-                        }
+                self.GETImage(response, { (result, error) in
+                    if error != nil{
+                        completionHandlerForGET(nil,"Error fetching random image")
+                    } else {
+                        completionHandlerForGET(result as AnyObject,nil)
                     }
-                }
-
-            }
+                })
         }
-        
     }
-    
 }
 
-
+}
