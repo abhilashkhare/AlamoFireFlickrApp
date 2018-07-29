@@ -24,6 +24,7 @@ class ViewController: UIViewController {
             }
             else{
                 print(result)
+                
             }
         }
     }
