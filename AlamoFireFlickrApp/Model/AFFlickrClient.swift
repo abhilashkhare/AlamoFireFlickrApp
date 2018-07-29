@@ -14,14 +14,24 @@ class AFFlickrClient {
     static var sharedInstance = AFFlickrClient()
     
     func fetchImageGET(_ completionHandlerForGET: @escaping (_ result : AnyObject?, _ error : String?) ->Void){
-        var randomPageNumber = arc4random_uniform(UInt32(1000))
+        let randomPageNumber = arc4random_uniform(UInt32(1000))
         print(randomPageNumber)
         Alamofire.request("https://api.flickr.com/services/rest/", method: .get, parameters: ["method":"flickr.photos.search","api_key":"c4deaa1b0a7b77672f46c6a4b145eccc", "text":"ocean","page":randomPageNumber,"format":"json","nojsoncallback":"1"]).responseJSON { (response) in
             if response.error != nil{
                 completionHandlerForGET(nil,response.error.debugDescription)
             }
             else{
-                completionHandlerForGET(response.value as AnyObject,nil)
+                if let result = response.result.value as? [String : Any] {
+                    if let photos = result["photos"] as? [String : Any]{
+                        if let photo = photos["photo"] as? [[String : Any]]{
+                            let randomImage  = Int(arc4random_uniform(UInt32(100)))
+                            if let image = photo[randomImage] as? [String : Any]{
+                                completionHandlerForGET(image as AnyObject,nil)
+                            }
+                        }
+                    }
+                }
+
             }
         }
         
