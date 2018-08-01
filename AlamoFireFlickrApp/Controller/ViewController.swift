@@ -12,6 +12,12 @@ import Alamofire
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    var farmID : AnyObject!
+    var serverID : AnyObject!
+    var ID : AnyObject!
+    var secret : AnyObject!
+    var url : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +29,26 @@ class ViewController: UIViewController {
                 print(error)
             }
             else{
-                print(result)
+                print(result!)
+                if let farmid = result!["farm"] {
+                    self.farmID = farmid
+                    print(self.farmID!)
+                }
+                if let serverid = result!["server"] {
+                    self.serverID = serverid
+                    print(self.serverID!)
+                }
+                if let id = result!["id"] {
+                    self.ID = id
+                    print(self.ID!)
+                }
+                if let secretID = result!["secret"] {
+                    self.secret = secretID
+                    print(self.secret!)
+                }
+                
+              self.url = "https://farm\(self.farmID!).staticflickr.com/\(self.serverID!)/\(self.ID!)_\(self.secret!).jpg"
+                print(self.url!)
                 
             }
         }
