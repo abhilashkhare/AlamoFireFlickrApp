@@ -18,9 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0p-IP-nXq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0p-IP-nXq">
                                 <rect key="frame" x="112.5" y="60" width="150" height="150"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="RTZ-Kf-1kb"/>
                                     <constraint firstAttribute="width" constant="150" id="UWU-Tk-Rjn"/>
@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="40" id="bEz-nR-j6K"/>
                                     <constraint firstAttribute="width" constant="80" id="pFR-sH-KeH"/>
                                 </constraints>
-                                <state key="normal" title="Get Image"/>
+                                <state key="normal" title="Click Here!"/>
                                 <connections>
                                     <action selector="touchGetImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OLP-TX-COJ"/>
                                 </connections>
