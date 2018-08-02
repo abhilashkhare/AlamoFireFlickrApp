@@ -46,12 +46,26 @@ class ViewController: UIViewController {
                     self.secret = secretID
                     print(self.secret!)
                 }
-                
               self.url = "https://farm\(self.farmID!).staticflickr.com/\(self.serverID!)/\(self.ID!)_\(self.secret!).jpg"
                 print(self.url!)
-                
+                self.displayImage(self.url!)
             }
         }
     }
+    
+    func displayImage(_ url : String) -> Void {
+        DispatchQueue.main.async {
+     
+        Alamofire.request(url).responseString { (response) in
+            if response.error != nil{
+                print(response.error.debugDescription)
+            } else{
+                self.imageView.image = UIImage(data: response.data!, scale: 1)
+                }
+            }
+        }
+    }
+
+
 }
 
